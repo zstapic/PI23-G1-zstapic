@@ -24,9 +24,28 @@ namespace Evaluation_Manager
 
         private void ShowStudents()
         {
-            StudentRepository repository = new StudentRepository();
-            List<Student> students = repository.GetStudents();
+            List<Student> students = StudentRepository.GetStudents();
+
             dgvStudents.DataSource = students;
+
+            dgvStudents.Columns["Id"].DisplayIndex = 0;
+            dgvStudents.Columns["FirstName"].DisplayIndex = 1;
+            dgvStudents.Columns["LastName"].DisplayIndex = 2;
+            dgvStudents.Columns["Grade"].DisplayIndex = 3;
+        }
+
+        private void btnEvaluateStudent_Click(object sender, EventArgs e)
+        {
+            if (dgvStudents.SelectedRows.Count > 0)
+            {
+                Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
+
+                if (selectedStudent != null)
+                {
+                    FrmEvaluation frmEvaluation = new FrmEvaluation(selectedStudent);
+                    frmEvaluation.ShowDialog();
+                }
+            }
         }
     }
 }

@@ -8,9 +8,9 @@ using DBLayer;
 
 namespace Evaluation_Manager
 {
-    public class StudentRepository
+    public static class StudentRepository
     {
-        private Student CreateObject(SqlDataReader reader)
+        private static Student CreateObject(SqlDataReader reader)
         {
             Student student = new Student();
 
@@ -23,7 +23,7 @@ namespace Evaluation_Manager
             return student;
         }
 
-        public Student GetStudent(int id)
+        public static Student GetStudent(int id)
         {
             Student student = null;
             DB.OpenConnection();
@@ -39,7 +39,7 @@ namespace Evaluation_Manager
             return student;
         }
 
-        public List<Student> GetStudents()
+        public static List<Student> GetStudents()
         {
             List<Student> studenti = new List<Student>();
 
