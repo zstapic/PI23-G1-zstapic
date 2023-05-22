@@ -12,8 +12,7 @@ namespace Evaluation_Manager
 {
     public partial class FrmLogin : Form
     {
-        string username = "nastavnik";
-        string password = "test";
+        public static Teacher LoggedTeacher { get; set; }
 
         public FrmLogin()
         {
@@ -32,9 +31,11 @@ namespace Evaluation_Manager
             }
             else
             {
-                if (txtUsername.Text == username && txtPassword.Text == password)
+                LoggedTeacher = TeacherRepository.GetTeacher(txtUsername.Text);
+                if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text))
                 {
                     FrmStudents frmStudents = new FrmStudents();
+                    frmStudents.Text = $"{LoggedTeacher.FirstName} {LoggedTeacher.LastName}";
                     Hide();
                     frmStudents.ShowDialog();
                     Close();
