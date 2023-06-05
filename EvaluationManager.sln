@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation Manager", "Evalu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLayer", "DBLayer\DBLayer.csproj", "{8D074483-4A95-4F06-A7BD-EB14609F7BDF}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Evaluation Manager Installer", "EvaluationManagerInstaller\EvaluationManagerInstaller.vdproj", "{ECF344D8-B277-4B1D-BF2B-5DFE0B769041}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{8D074483-4A95-4F06-A7BD-EB14609F7BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D074483-4A95-4F06-A7BD-EB14609F7BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D074483-4A95-4F06-A7BD-EB14609F7BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF344D8-B277-4B1D-BF2B-5DFE0B769041}.Debug|Any CPU.ActiveCfg = Debug
+		{ECF344D8-B277-4B1D-BF2B-5DFE0B769041}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
